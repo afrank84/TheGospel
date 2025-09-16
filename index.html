@@ -69,6 +69,11 @@
     </footer>
   </main>
 
+    Site views (all pages): <span id="total">…</span>
+  <script>
+    fetch('https://afrank84.goatcounter.com/counter/TOTAL.json')
+      .then(r => r.json()).then(d => total.textContent = d.count);
+  </script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
